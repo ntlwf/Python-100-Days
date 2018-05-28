@@ -103,6 +103,22 @@ print(sys.version)
 print('hello, world!')
 ```
 
+#### 实现python命令行光标移动 
+在linux系统里，python移动光标上下左右会变成显示ABCD 
+以下方法是在安装python前做的操作。  
+
+1.首先查看有没有安装readline-devel rpm -qa | grep readline //查看有没有安装readline-devel  
+
+2.其次查看readline-devel正确的包名并安装 使用yum search readline //查看readline-devel正确的包名 
+   使用yum -y install readline-devel  
+
+3.最终编译安装python 在安装完readline-devel之后，
+    在pthon的安装目录 使用make && make install //重新编译&&安装python  
+    再次运行python的时候，上下左右键就可以正常进行左右移动了
+
+
+
+
 #### 运行程序
 
 切换到源代码所在的目录并执行下面的命令，看看屏幕上是否输出了"hello, world!"。
