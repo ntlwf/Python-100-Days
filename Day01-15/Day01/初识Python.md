@@ -179,6 +179,17 @@ python -m pip install ipython jupyter
 
 ![](./res/python-ipython.png)
 
+
+#### virtualenv环境下使用ipython提示require sqlite 
+
+    问题:centos7最小化安装后,源码安装python3.5.2,在virtualenv环境下使用ipython提示IPythonHistoryrequiresSQLite,yourhistorywillnotbesaved
+
+    原因:centos7最小化安装后,没有安装sqlite-devel。类似的openssl-devel也会出现类似的问题。
+
+    解决:yuminstallsqlite-devel然后再次编译安装python3.5.2,即可解决。 
+
+
+
 当然我们也可以通过Jupyter运行名为notebook的项目在浏览器窗口中进行交互式操作。
 
 ```Shell
